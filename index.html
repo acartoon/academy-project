@@ -1,0 +1,508 @@
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Магазин запчастей</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <div class="page-header__top">
+          <div class="page-header__container">
+            <h1>Интернет-магазин Автозапчастей: Главная</h1>
+            <button class="main-nav__trigger"><span>Открыть меню</span></button><a class="main-nav__logo"><img src="/img/logo.png" alt="Логотип интернет-магазина Автозапчастей"/></a>
+            <div class="menu">
+              <div class="menu__wrapper">
+                <ul class="menu__user">
+                  <li class="menu__user-item"><a class="menu__user-link" href="">Войти</a></li>
+                  <li class="menu__user-item"><a class="menu__user-link" href="">Регистрация</a></li>
+                  <li class="menu__user-item"><a class="menu__user-link" href="">Избранное</a></li>
+                </ul>
+                <ul class="menu__top">
+                  <li class="menu__top-item"><a class="menu__top-link" href="">Магазины</a></li>
+                  <li class="menu__top-item"><a class="menu__top-link" href="">Акции</a></li>
+                  <li class="menu__top-item"><a class="menu__top-link" href="">Доставка и оплата</a></li>
+                </ul>
+                <ul class="menu__catalog">
+                  <li class="menu__catalog-item"><a class="menu__catalog-link" href="">Каталог запчастей</a></li>
+                  <li class="menu__catalog-item"><a class="menu__catalog-link" href="">Каталог ТО</a></li>
+                  <li class="menu__catalog-item"><a class="menu__catalog-link" href="">Шины</a></li>
+                  <li class="menu__catalog-item"><a class="menu__catalog-link" href="">Диски</a></li>
+                  <li class="menu__catalog-item"><a class="menu__catalog-link" href="">Аккомуляторы</a></li>
+                  <li class="menu__catalog-item"><a class="menu__catalog-link" href="">Автомасла</a></li>
+                  <li class="menu__catalog-item"><a class="menu__catalog-link" href="">Автолампы</a></li>
+                  <li class="menu__catalog-item"><a class="menu__catalog-link" href="">Аксессуары</a></li>
+                </ul>
+                <div class="main-nav__adress">Санкт-Петербург, ул Большая Конюшенная, д 19</div>
+              </div>
+            </div>
+            <ul class="user-nav">
+              <li class="user-nav__item"><a class="user-nav__link user-nav__link--favourites" href=""><span class="visually-hidden">Избранное</span></a></li>
+              <li class="user-nav__item"><a class="user-nav__link user-nav__link--account" href=""><span class="visually-hidden">Личный кабинет</span></a></li>
+              <li class="user-nav__item"><a class="user-nav__link user-nav__link--basket" href=""><span class="visually-hidden">Корзина</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <nav class="page-header__bottom nav">
+          <ul class="nav-list">
+            <li class="nav-list__item"><a class="nav-list__link" href="">Каталог запчастей</a></li>
+            <li class="nav-list__item"><a class="nav-list__link" href="">Каталог ТО</a></li>
+            <li class="nav-list__item"><a class="nav-list__link" href="">Шины</a></li>
+            <li class="nav-list__item"><a class="nav-list__link" href="">Диски</a></li>
+            <li class="nav-list__item"><a class="nav-list__link" href="">Аккомуляторы</a></li>
+            <li class="nav-list__item"><a class="nav-list__link" href="">Автомасла</a></li>
+            <li class="nav-list__item"><a class="nav-list__link" href="">Автолампы</a></li>
+            <li class="nav-list__item"><a class="nav-list__link" href="">Аксессуары</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section class="notice">
+        <h2>Анонс товаров</h2>
+        <div class="notice-container">
+          <ul class="notice__slider slider">
+            <li class="slider__item"></li>
+            <li class="slider__item"></li>
+            <li class="slider__item"></li>
+          </ul>
+          <div class="notice__action slider slider--big-dots">
+            <article class="action">
+              <h3 class="action__title">Акция</h3>
+              <div class="action__price">
+                <div class="action__price-new"></div>
+                <div class="action__price-old"></div>
+              </div>
+              <figure class="action__fig">
+                <figcaption class="action__figcaption">Лампочка mini</figcaption>
+              </figure>
+              <div class="action__footer">
+                <div class="action__footer-caption">До конца акции осталось</div>
+                <div class="action__countdown countdown">
+                  <div class="countdown__dial">
+                    <div class="countdown__numbers">00</div>
+                    <div class="countdown__caption">часов</div>
+                  </div>
+                  <div class="countdown__dial">
+                    <div class="countdown__numbers">20</div>
+                    <div class="countdown__caption">минут</div>
+                  </div>
+                  <div class="countdown__dial">
+                    <div class="countdown__numbers">00</div>
+                    <div class="countdown__caption">секунд</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="search">
+        <h2>Поиск</h2>
+        <div class="search__container tabs"></div>
+        <ul class="tabs__list">
+          <li class="tabs__item"><a class="tabs__link" href="#search-vin">Поиск по Vin</a></li>
+          <li class="tabs__item"><a class="tabs__link" href="#search-brand">Поиск по марке</a></li>
+          <li class="tabs__item"><a class="tabs__link" href="#search-name">Поиск по названию товара</a></li>
+          <li class="tabs__item"><a class="tabs__link" href="#search-article">Поиск по артикулу</a></li>
+        </ul>
+        <section class="tabs__panel">
+          <h3>Поиск по vin</h3>
+          <form method="POST">
+            <div class="search__fields">
+              <div class="search-input">
+                <label for="search-vin-input">Введите vin код</label>
+                <input type="search" id="search-vin-input" placeholder="Введите vin код" name="search-vin"/>
+              </div>
+              <button class="search__btn">искать</button>
+            </div>
+          </form>
+        </section>
+        <section class="tabs__panel">
+          <h3>Поиск по марке автомобиля</h3>
+          <form method="POST">
+            <div class="search__fields">
+              <div class="search-input">
+                <label for="search-brand-input">Введите марку автомобиля</label>
+                <input type="search" id="search-brand-input" placeholder="Введите марку автомобиля" name="search-brand"/>
+              </div>
+              <button class="search__btn">искать</button>
+            </div>
+          </form>
+        </section>
+        <section class="tabs__panel">
+          <h3>Поиск по названию товара</h3>
+          <form method="POST">
+            <div class="search__fields">
+              <div class="search-input">
+                <label for="search-name-input">Введите название товара</label>
+                <input type="search" id="search-name-input" placeholder="Введите название товара" name="search-name"/>
+              </div>
+              <button class="search__btn">искать</button>
+            </div>
+          </form>
+        </section>
+        <section class="tabs__panel">
+          <h3>Поиск по артикулу товара</h3>
+          <form method="POST">
+            <div class="search__fields">
+              <div class="search-input">
+                <label for="search-article-input">Введите артикул товара</label>
+                <input type="search" id="search-article-input" placeholder="Введите артикул товара" name="search-article"/>
+              </div>
+              <button class="search__btn">искать</button>
+            </div>
+          </form>
+        </section>
+      </section>
+      <section class="categories">
+        <div class="categories__container">
+          <h2>Основное меню</h2>
+          <ul class="categories__list">
+            <li class="categories__list-item"><a class="categories__link" href="#">
+                <div class="categories__wrapper">
+                  <h3 class="categories__title">Автохимия</h3>
+                  <div class="categories__icon categories__icon--autochemicals"></div><span class="categories__btn">перейти</span>
+                </div></a></li>
+            <li class="categories__list-item"><a class="categories__link" href="#">
+                <div class="categories__wrapper">
+                  <h3 class="categories__title">Шины и диски</h3>
+                  <div class="categories__icon categories__icon--tires"></div><span class="categories__btn">перейти</span>
+                </div></a></li>
+            <li class="categories__list-item"><a class="categories__link" href="#">
+                <div class="categories__wrapper">
+                  <h3 class="categories__title">Инструменты</h3>
+                  <div class="categories__icon categories__icon--tools"></div><span class="categories__btn">перейти</span>
+                </div></a></li>
+            <li class="categories__list-item"><a class="categories__link" href="#">
+                <div class="categories__wrapper">
+                  <h3 class="categories__title">Запчасти на ТО</h3>
+                  <div class="categories__icon categories__icon--spares"></div><span class="categories__btn">перейти</span>
+                </div></a></li>
+            <li class="categories__list-item"><a class="categories__link" href="#">
+                <div class="categories__wrapper">
+                  <h3 class="categories__title">Автоэлектроника</h3>
+                  <div class="categories__icon categories__icon--autoelectronic"></div><span class="categories__btn">перейти</span>
+                </div></a></li>
+            <li class="categories__list-item"><a class="categories__link" href="#">
+                <div class="categories__wrapper">
+                  <h3 class="categories__title">Аксессуары и другое</h3>
+                  <div class="categories__icon categories__icon--accessories"></div><span class="categories__btn">перейти</span>
+                </div></a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="product product--popular">
+        <div class="container tabs">
+          <h2>Популярные товары</h2>
+          <ul class="tabs__list">
+            <li class="tabs__item"><a class="tabs__link" href="#product-#{index}">Автохимия</a></li>
+            <li class="tabs__item"><a class="tabs__link" href="#product-#{index}">Шины и диски</a></li>
+            <li class="tabs__item"><a class="tabs__link" href="#product-#{index}">Инструменты</a></li>
+            <li class="tabs__item"><a class="tabs__link" href="#product-#{index}">Запчасти на ТО</a></li>
+            <li class="tabs__item"><a class="tabs__link" href="#product-#{index}">Автоэлектроника</a></li>
+            <li class="tabs__item"><a class="tabs__link" href="#product-#{index}">Аксессуары и другое</a></li>
+          </ul>
+          <section class="tabs__panel" id="product-autochemicals">
+            <h3>Автохимия</h3>
+            <div class="product__list slider slider--big-dots">
+              <div class="product__wrapper"><a class="product__item product__item--sale" href="#">
+                  <div class="product__attributes">
+                    <button class="product__like">Добавить в избранное</button>
+                    <button class="product__basket">Добавить в корзину</button>
+                  </div>
+                  <button class="product__overlay" href="#">Быстрый просмотр</button>
+                  <figure class="product__fig">
+                    <figcaption class="product__figcaption">ремень</figcaption>
+                  </figure>
+                  <p class="product__price">440</p>
+                  <div class="product__presence">
+                    <p class="product__presence-text">Нет в наличии</p>
+                    <button class="product__presence-link" href="#">Сообщить о поступлении</button>
+                  </div></a></div>
+            </div>
+          </section>
+          <section class="tabs__panel" id="product-tires">
+            <h3>Шины и диски</h3>
+            <div class="product__list slider slider--big-dots">
+              <div class="product__wrapper"><a class="product__item product__item--sale" href="#">
+                  <div class="product__attributes">
+                    <button class="product__like">Добавить в избранное</button>
+                    <button class="product__basket">Добавить в корзину</button>
+                  </div>
+                  <button class="product__overlay" href="#">Быстрый просмотр</button>
+                  <figure class="product__fig">
+                    <figcaption class="product__figcaption">ремень</figcaption>
+                  </figure>
+                  <p class="product__price">440</p>
+                  <div class="product__presence">
+                    <p class="product__presence-text">Нет в наличии</p>
+                    <button class="product__presence-link" href="#">Сообщить о поступлении</button>
+                  </div></a></div>
+            </div>
+          </section>
+          <section class="tabs__panel" id="product-tools">
+            <h3>Инструменты</h3>
+            <div class="product__list slider slider--big-dots">
+              <div class="product__wrapper"><a class="product__item product__item--sale" href="#">
+                  <div class="product__attributes">
+                    <button class="product__like">Добавить в избранное</button>
+                    <button class="product__basket">Добавить в корзину</button>
+                  </div>
+                  <button class="product__overlay" href="#">Быстрый просмотр</button>
+                  <figure class="product__fig">
+                    <figcaption class="product__figcaption">ремень</figcaption>
+                  </figure>
+                  <p class="product__price">440</p>
+                  <div class="product__presence">
+                    <p class="product__presence-text">Нет в наличии</p>
+                    <button class="product__presence-link" href="#">Сообщить о поступлении</button>
+                  </div></a></div>
+            </div>
+          </section>
+          <section class="tabs__panel" id="product-spares">
+            <h3>Запчасти на ТО</h3>
+            <div class="product__list slider slider--big-dots">
+              <div class="product__wrapper"><a class="product__item product__item--sale" href="#">
+                  <div class="product__attributes">
+                    <button class="product__like">Добавить в избранное</button>
+                    <button class="product__basket">Добавить в корзину</button>
+                  </div>
+                  <button class="product__overlay" href="#">Быстрый просмотр</button>
+                  <figure class="product__fig">
+                    <figcaption class="product__figcaption">ремень</figcaption>
+                  </figure>
+                  <p class="product__price">440</p>
+                  <div class="product__presence">
+                    <p class="product__presence-text">Нет в наличии</p>
+                    <button class="product__presence-link" href="#">Сообщить о поступлении</button>
+                  </div></a></div>
+            </div>
+          </section>
+          <section class="tabs__panel" id="product-autoelectronic">
+            <h3>Автоэлектроника</h3>
+            <div class="product__list slider slider--big-dots">
+              <div class="product__wrapper"><a class="product__item product__item--sale" href="#">
+                  <div class="product__attributes">
+                    <button class="product__like">Добавить в избранное</button>
+                    <button class="product__basket">Добавить в корзину</button>
+                  </div>
+                  <button class="product__overlay" href="#">Быстрый просмотр</button>
+                  <figure class="product__fig">
+                    <figcaption class="product__figcaption">ремень</figcaption>
+                  </figure>
+                  <p class="product__price">440</p>
+                  <div class="product__presence">
+                    <p class="product__presence-text">Нет в наличии</p>
+                    <button class="product__presence-link" href="#">Сообщить о поступлении</button>
+                  </div></a></div>
+            </div>
+          </section>
+          <section class="tabs__panel" id="product-accessories">
+            <h3>Аксессуары и другое</h3>
+            <div class="product__list slider slider--big-dots">
+              <div class="product__wrapper"><a class="product__item product__item--sale" href="#">
+                  <div class="product__attributes">
+                    <button class="product__like">Добавить в избранное</button>
+                    <button class="product__basket">Добавить в корзину</button>
+                  </div>
+                  <button class="product__overlay" href="#">Быстрый просмотр</button>
+                  <figure class="product__fig">
+                    <figcaption class="product__figcaption">ремень</figcaption>
+                  </figure>
+                  <p class="product__price">440</p>
+                  <div class="product__presence">
+                    <p class="product__presence-text">Нет в наличии</p>
+                    <button class="product__presence-link" href="#">Сообщить о поступлении</button>
+                  </div></a></div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <!--баннер-->
+      <section class="banner">
+        <div class="container"><a class="banner__item" href="#"><img src=""/></a><a href="#">Посмотреть все</a></div>
+      </section>
+      <section class="product product--suggestion">
+        <h2>С этим товаров покупают</h2>
+        <ul class="tabs__list">
+          <li class="tabs__item"><a class="tabs__link" href="#product-sug-#{index}">Автохимия</a></li>
+          <li class="tabs__item"><a class="tabs__link" href="#product-sug-#{index}">Шины и диски</a></li>
+          <li class="tabs__item"><a class="tabs__link" href="#product-sug-#{index}">Инструменты</a></li>
+          <li class="tabs__item"><a class="tabs__link" href="#product-sug-#{index}">Запчасти на ТО</a></li>
+          <li class="tabs__item"><a class="tabs__link" href="#product-sug-#{index}">Автоэлектроника</a></li>
+          <li class="tabs__item"><a class="tabs__link" href="#product-sug-#{index}">Аксессуары и другое</a></li>
+        </ul>
+        <section class="tabs__panel" id="product-sug-autochemicals">
+          <h3>Автохимия</h3>
+          <div class="product__list slider slider--big-dots">
+            <div class="product__wrapper"><a class="product__item product__item--sale" href="#">
+                <div class="product__attributes">
+                  <button class="product__like">Добавить в избранное</button>
+                  <button class="product__basket">Добавить в корзину</button>
+                </div>
+                <button class="product__overlay" href="#">Быстрый просмотр</button>
+                <figure class="product__fig">
+                  <figcaption class="product__figcaption">ремень</figcaption>
+                </figure>
+                <p class="product__price">440</p>
+                <div class="product__presence">
+                  <p class="product__presence-text">Нет в наличии</p>
+                  <button class="product__presence-link" href="#">Сообщить о поступлении</button>
+                </div></a></div>
+          </div>
+        </section>
+        <section class="tabs__panel" id="product-sug-tires">
+          <h3>Шины и диски</h3>
+          <div class="product__list slider slider--big-dots">
+            <div class="product__wrapper"><a class="product__item product__item--sale" href="#">
+                <div class="product__attributes">
+                  <button class="product__like">Добавить в избранное</button>
+                  <button class="product__basket">Добавить в корзину</button>
+                </div>
+                <button class="product__overlay" href="#">Быстрый просмотр</button>
+                <figure class="product__fig">
+                  <figcaption class="product__figcaption">ремень</figcaption>
+                </figure>
+                <p class="product__price">440</p>
+                <div class="product__presence">
+                  <p class="product__presence-text">Нет в наличии</p>
+                  <button class="product__presence-link" href="#">Сообщить о поступлении</button>
+                </div></a></div>
+          </div>
+        </section>
+        <section class="tabs__panel" id="product-sug-tools">
+          <h3>Инструменты</h3>
+          <div class="product__list slider slider--big-dots">
+            <div class="product__wrapper"><a class="product__item product__item--sale" href="#">
+                <div class="product__attributes">
+                  <button class="product__like">Добавить в избранное</button>
+                  <button class="product__basket">Добавить в корзину</button>
+                </div>
+                <button class="product__overlay" href="#">Быстрый просмотр</button>
+                <figure class="product__fig">
+                  <figcaption class="product__figcaption">ремень</figcaption>
+                </figure>
+                <p class="product__price">440</p>
+                <div class="product__presence">
+                  <p class="product__presence-text">Нет в наличии</p>
+                  <button class="product__presence-link" href="#">Сообщить о поступлении</button>
+                </div></a></div>
+          </div>
+        </section>
+        <section class="tabs__panel" id="product-sug-spares">
+          <h3>Запчасти на ТО</h3>
+          <div class="product__list slider slider--big-dots">
+            <div class="product__wrapper"><a class="product__item product__item--sale" href="#">
+                <div class="product__attributes">
+                  <button class="product__like">Добавить в избранное</button>
+                  <button class="product__basket">Добавить в корзину</button>
+                </div>
+                <button class="product__overlay" href="#">Быстрый просмотр</button>
+                <figure class="product__fig">
+                  <figcaption class="product__figcaption">ремень</figcaption>
+                </figure>
+                <p class="product__price">440</p>
+                <div class="product__presence">
+                  <p class="product__presence-text">Нет в наличии</p>
+                  <button class="product__presence-link" href="#">Сообщить о поступлении</button>
+                </div></a></div>
+          </div>
+        </section>
+        <section class="tabs__panel" id="product-sug-autoelectronic">
+          <h3>Автоэлектроника</h3>
+          <div class="product__list slider slider--big-dots">
+            <div class="product__wrapper"><a class="product__item product__item--sale" href="#">
+                <div class="product__attributes">
+                  <button class="product__like">Добавить в избранное</button>
+                  <button class="product__basket">Добавить в корзину</button>
+                </div>
+                <button class="product__overlay" href="#">Быстрый просмотр</button>
+                <figure class="product__fig">
+                  <figcaption class="product__figcaption">ремень</figcaption>
+                </figure>
+                <p class="product__price">440</p>
+                <div class="product__presence">
+                  <p class="product__presence-text">Нет в наличии</p>
+                  <button class="product__presence-link" href="#">Сообщить о поступлении</button>
+                </div></a></div>
+          </div>
+        </section>
+        <section class="tabs__panel" id="product-sug-accessories">
+          <h3>Аксессуары и другое</h3>
+          <div class="product__list slider slider--big-dots">
+            <div class="product__wrapper"><a class="product__item product__item--sale" href="#">
+                <div class="product__attributes">
+                  <button class="product__like">Добавить в избранное</button>
+                  <button class="product__basket">Добавить в корзину</button>
+                </div>
+                <button class="product__overlay" href="#">Быстрый просмотр</button>
+                <figure class="product__fig">
+                  <figcaption class="product__figcaption">ремень</figcaption>
+                </figure>
+                <p class="product__price">440</p>
+                <div class="product__presence">
+                  <p class="product__presence-text">Нет в наличии</p>
+                  <button class="product__presence-link" href="#">Сообщить о поступлении</button>
+                </div></a></div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="container">
+          <div class="page-footer__form">
+            <h2>Подпишитесь на нашу рассылку и узнавайте о акция быстрее</h2>
+            <form>
+              <label for="email">Введите ваш e-mail:</label>
+              <unput type="email" id="email" name="email" placeholder="Введите ваш e-mail:" required="required"></unput>
+              <button type="submit" name="button">Отправить</button>
+            </form>
+          </div>
+          <div class="page-footer__sections">
+            <div class="page-footer__sections-item">
+              <button>Информация</button>
+              <ul class="footer__list">
+                <li class="footer__list-item"><a href="#">О компании</a></li>
+                <li class="footer__list-item"><a href="#">Контакты</a></li>
+                <li class="footer__list-item"><a href="#">Реквизиты</a></li>
+                <li class="footer__list-item"><a href="#">Магазины</a></li>
+              </ul>
+            </div>
+            <div class="page-footer__sections-item">
+              <button>Сервисный центр</button>
+              <ul class="footer__list">
+                <li class="footer__list-item"><a href="#">Доставка и самовывоз</a></li>
+                <li class="footer__list-item"><a href="#">Оплата</a></li>
+                <li class="footer__list-item"><a href="#">Возврат-обмен</a></li>
+                <li class="footer__list-item"><a href="#">Новости</a></li>
+              </ul>
+            </div>
+            <div class="page-footer__sections-item">
+              <button>Интернет-магазин</button>
+              <ul class="footer__list">
+                <li class="footer__list-item"><a href="#">Доставка и самовывоз</a></li>
+                <li class="footer__list-item"><a href="#">Оплата</a></li>
+                <li class="footer__list-item"><a href="#">Возврат-обмен</a></li>
+                <li class="footer__list-item"><a href="#">Новости</a></li>
+              </ul>
+            </div>
+            <div class="page-footer__sections-item">
+              <button></button>
+              <ul class="footer__list">
+                <li class="footer__list-item"><a href="#">Акции</a></li>
+                <li class="footer__list-item"><a href="#">Договор оферты</a></li>
+                <li class="footer__list-item"><a href="#">Политика обработки персональных данных</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="page-footer__titile">Onisshop. Интернет-магазин автозапчастей</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,192 @@
+-   var topMenu = ['Магазины', 'Акции', 'Доставка и оплата'];
+-   var userMenu2 = {favourites: 'Избранное', account: 'Личный кабинет', basket:'Корзина'};
+-   var userMenu = ['Войти', 'Регистрация', 'Избранное'];
+-   var mainMenu = ['Каталог запчастей', 'Каталог ТО', 'Шины', 'Диски', 'Аккомуляторы', 'Автомасла', 'Автолампы', 'Аксессуары'];
+-   var productType = {autochemicals: 'Автохимия', tires: 'Шины и диски', tools: 'Инструменты', spares: 'Запчасти на ТО', autoelectronic: 'Автоэлектроника', accessories: 'Аксессуары и другое'};
+-   var tabs = {vin: 'Vin', brand: 'марке', name: 'названию товара', article: 'артикулу'};
+-
+    var search = [
+        ['vin', 'Введите vin код', 'Поиск по vin'],
+        ['brand', 'Введите марку автомобиля','Поиск по марке автомобиля'],
+        ['name', 'Введите название товара', 'Поиск по названию товара'],
+        ['article', 'Введите артикул товара','Поиск по артикулу товара'],
+    ];
+-
+    var footerItem = [
+        ['О компании', 'Контакты', 'Реквизиты', 'Магазины'],
+        ['Доставка и самовывоз', 'Оплата', 'Возврат-обмен', 'Новости'],
+        ['Доставка и самовывоз', 'Оплата', 'Возврат-обмен', 'Новости'],
+        ['Акции', 'Договор оферты', 'Политика обработки персональных данных'],
+
+    ];
+-   var footerTitle = ['Информация', 'Сервисный центр', 'Интернет-магазин'];
+
+html(lang='ru')
+    head
+        meta(charset='utf-8')
+        title= 'Магазин запчастей'
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', href='style.css')
+    body
+        header.page-header
+            .page-header__wrapper
+                .page-header__top
+                    .page-header__container
+                        h1 Интернет-магазин Автозапчастей: Главная
+                        button.main-nav__trigger
+                            span Открыть меню
+                        a.main-nav__logo
+                            img(src="/img/logo.png" alt="Логотип интернет-магазина Автозапчастей")
+                        .menu
+                            .menu__wrapper
+                                ul.menu__user
+                                    each val in userMenu
+                                        li.menu__user-item
+                                            a(href='').menu__user-link=val
+
+                                ul.menu__top
+                                    each val in topMenu
+                                        li.menu__top-item
+                                            a(href='').menu__top-link=val
+
+                                ul.menu__catalog
+                                    each val in mainMenu
+                                        li.menu__catalog-item
+                                            a(href='').menu__catalog-link=val
+                                .main-nav__adress Санкт-Петербург, ул Большая Конюшенная, д 19
+                        ul.user-nav
+                            each val, key in userMenu2
+                                li.user-nav__item
+                                    a(href='' class=`user-nav__link user-nav__link--${key}`)
+                                        span.visually-hidden=val
+                nav.page-header__bottom.nav
+                    ul.nav-list
+                        each val in mainMenu
+                            li.nav-list__item
+                                a(href="").nav-list__link=val
+
+        main.main
+            section.notice
+                h2 Анонс товаров
+                .notice-container
+                    ul.notice__slider.slider
+                        li.slider__item
+                        li.slider__item
+                        li.slider__item
+                    .notice__action.slider.slider--big-dots
+                        article.action
+                            h3.action__title Акция
+                            .action__price
+                                .action__price-new
+                                .action__price-old
+                            figure.action__fig
+                                figcaption.action__figcaption Лампочка mini
+                            .action__footer
+                                .action__footer-caption До конца акции осталось
+                                .action__countdown.countdown
+                                    each val in [ ['00', 'часов'], ['20', 'минут'], ['00', 'секунд']]
+                                        .countdown__dial
+                                            .countdown__numbers=val[0]
+                                            .countdown__caption=val[1]
+
+            section.search
+                h2 Поиск
+                .search__container.tabs
+                ul.tabs__list
+                    each val, index in tabs
+                         li.tabs__item
+                           a(href=`#search-${index}`).tabs__link=`Поиск по ${val}`
+                each val in search
+                    section.tabs__panel
+                        h3=val[2]
+                        form(method='POST')
+                            .search__fields
+                                .search-input
+                                    label(for=`search-${val[0]}-input`)=val[1]
+                                    input(type='search' id=`search-${val[0]}-input` placeholder=val[1] name=`search-${val[0]}`)
+                                button.search__btn искать
+            section.categories
+                .categories__container
+                    h2 Основное меню
+                    ul.categories__list
+                        each val, index in productType
+                            li.categories__list-item
+                                a(href='#').categories__link
+                                    .categories__wrapper
+                                        h3.categories__title=val
+                                        div(class=`categories__icon categories__icon--${index}`)
+                                        span.categories__btn перейти
+
+            section.product.product--popular
+                .container.tabs
+                    h2 Популярные товары
+                    ul.tabs__list
+                        each val, index in productType
+                            li.tabs__item
+                                a(href=`#product-#{index}`).tabs__link=val
+                    each val, index in productType
+                        section(id=`product-${index}`).tabs__panel
+                            h3=val
+                            .product__list.slider.slider--big-dots
+                                .product__wrapper
+                                    a(href='#').product__item.product__item--sale
+                                        .product__attributes
+                                            button.product__like Добавить в избранное
+                                            button.product__basket Добавить в корзину
+                                        button(href='#').product__overlay Быстрый просмотр
+                                        figure.product__fig
+                                            figcaption.product__figcaption ремень
+                                        p.product__price 440
+                                        .product__presence
+                                            p.product__presence-text Нет в наличии
+                                            button(href='#').product__presence-link Сообщить о поступлении
+            //баннер
+            section.banner
+                .container
+                    a(href='#').banner__item
+                        img(src="")
+                    a(href='#') Посмотреть все
+
+            section.product.product--suggestion
+                h2 С этим товаров покупают
+                ul.tabs__list
+                    each val, index in productType
+                        li.tabs__item
+                            a(href=`#product-sug-#{index}`).tabs__link=val
+                each val, index in productType
+                    section(id=`product-sug-${index}`).tabs__panel
+                        h3=val
+                        .product__list.slider.slider--big-dots
+                            .product__wrapper
+                                a(href='#').product__item.product__item--sale
+                                    .product__attributes
+                                        button.product__like Добавить в избранное
+                                        button.product__basket Добавить в корзину
+                                    button(href='#').product__overlay Быстрый просмотр
+                                    figure.product__fig
+                                        figcaption.product__figcaption ремень
+                                    p.product__price 440
+                                    .product__presence
+                                        p.product__presence-text Нет в наличии
+                                        button(href='#').product__presence-link Сообщить о поступлении
+
+        footer.page-footer
+            .page-footer__wrapper
+                .container
+                    .page-footer__form
+                        h2 Подпишитесь на нашу рассылку и узнавайте о акция быстрее
+                        form
+                            label(for='email') Введите ваш e-mail:
+                            unput(type='email' id='email' name='email' placeholder='Введите ваш e-mail:' required)
+                            button(type='submit' name='button') Отправить
+                    .page-footer__sections
+                        each val, index in footerItem
+                            .page-footer__sections-item
+                                button=footerTitle[index]
+                                ul.footer__list
+                                    each val2 in val
+                                        li.footer__list-item
+                                            a(href='#')=val2
+
+                p.page-footer__titile Onisshop. Интернет-магазин автозапчастей
+        script(src='script.js')
